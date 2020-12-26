@@ -16,7 +16,7 @@ body {
   background: smokeywhite;
 }
 
-/* Nav Menu */
+/* Nav menu */
 .overlay {
   position: fixed;
   z-index: 9;
@@ -25,9 +25,20 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.4);
+  transform: translateX(-100vw);
 }
 
-/* Menu Items */
+.overlay-show {
+  transition: all 0.4s ease-in-out;
+  transform: translateX(0);
+}
+
+.overlay-hide {
+  transition: all 0.8s ease-in-out;
+  transform: translateX(-100vw);
+}
+
+/* Menu items */
 nav,
 nav ul {
   height: 100vh;
@@ -93,7 +104,67 @@ nav li:nth-of-type(5) {
   background-color: var(--navColor5);
 }
 
-/* Hamburger Menu Bars */
+/* Animation- Slide navbars in*/
+.slidein-nav-1 {
+  animation: slide-in 0.4s linear 0.2s both;
+}
+
+.slidein-nav-2 {
+  animation: slide-in 0.4s linear 0.4s both;
+}
+
+.slidein-nav-3 {
+  animation: slide-in 0.4s linear 0.6s both;
+}
+
+.slidein-nav-4 {
+  animation: slide-in 0.4s linear 0.8s both;
+}
+
+.slidein-nav-5 {
+  animation: slide-in 0.4s linear 1s both;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Animation: Slide navbars out */
+.slideout-nav-1 {
+  animation: slide-out 0.3s linear 0.5s both;
+}
+
+.slideout-nav-2 {
+  animation: slide-out 0.3s linear 0.4s both;
+}
+
+.slideout-nav-3 {
+  animation: slide-out 0.3s linear 0.3s both;
+}
+
+.slideout-nav-4 {
+  animation: slide-out 0.3s linear 0.2s both;
+}
+
+.slideout-nav-5 {
+  animation: slide-out 0.3s linear 0.1s both;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Hamburger menu-bars */
 .menu-bars {
   position: fixed;
   top: 1rem;
@@ -122,7 +193,7 @@ nav li:nth-of-type(5) {
   transform: rotate(45deg) translate(-6px, -8px);
 }
 
-/* remove the second bar by fading out the opacity */
+/* Remove the second bar by fading out the opacity */
 .change .bar2 {
   opacity: 0;
 }

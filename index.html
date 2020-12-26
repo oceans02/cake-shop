@@ -5,28 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>Animated Nav</title>
+    <title>Animated Navigation</title>
 </head>
 <body>
     <!-- Menu Overlay -->
-    <div class="overlay" id="overlay">
+    <div class="overlay overlay-hide" id="overlay">
         <nav class="menu-items">
             <ul>
-                <li id="nav-1"><a href="#home">Home</a></li>
-                <li id="nav-2"><a href="#about">About</a></li>
-                <li id="nav-3"><a href="#cake-types">Cake Types</a></li>
-                <li id="nav-4"><a href="#cake-designs">Cake Designs</a></li>
-                <li id="nav-5"><a href="#contact">Contact</a></li>
+                <li id="nav-1" class="slideout-nav-1"><a href="#home">Home</a></li>
+                <li id="nav-2" class="slideout-nav-2"><a href="#about">About</a></li>
+                <li id="nav-3" class="slideout-nav-3"><a href="#cake-types">Cake Types</a></li>
+                <li id="nav-4" class="slideout-nav-4"><a href="#cake-designs">Cake Designs</a></li>
+                <li id="nav-5" class="slideout-nav-5"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 
-    <!-- Sections -->
+    <!-- Menu Bars -->
+    <div class="menu-bars" id="menu-bars">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>  
+    </div>
+
+    <!-- Sections -->   
     <section id="home"><a href="">CAKE SHOP</a></section>
     <section id="about"><h1>OUR JOURNEY DOWN THE CAKE WORLD</h1></section>
     <section id="cake-types"><h1>TYPES OF CAKES WE OFFER</h1></section>
     <section id="cake-designs"><h1>OUR BEST CAKE DESIGNS</h1></section>
     <section id="contact"><h1>CONTACT US</h1></section>
+    <div id="footer">Images used from unsplash.com</div>
 
     <!--Script  -->
     <script src="script.js"></script>
